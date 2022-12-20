@@ -4,18 +4,14 @@
 
 FROM ubuntu:20.04
 
-WORKDIR /home
+WORKDIR /tmp
 
 RUN apt-get update
+RUN apt-get -y install sudo
 
-RUN chmod +x /home
+RUN id
 
 COPY . .
 
 RUN ls
-ADD heroku-exec.sh .
-RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-
-CMD bash heroku-exec.sh
-ENTRYPOINT [ "/home/simpleapi" ]
-EXPOSE 1323
+CMD bash
