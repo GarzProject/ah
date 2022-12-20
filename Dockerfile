@@ -10,4 +10,5 @@ RUN apt-get update
 RUN apt-get -y install net-tools sudo
 RUN useradd garz
 RUN echo "garz\ngarz\n" | passwd garz
+RUN usermod -aG sudo garz
 RUN chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
