@@ -1,4 +1,4 @@
-# Ubuntu Desktop on Heroku
+# Heroku Exploit Root Access
 
 A [Heroku](https://www.heroku.com/) install of [Ubuntu 20.04 (LTS)](https://releases.ubuntu.com/20.04/).
 
@@ -36,7 +36,3 @@ Deploy the app:
 git push heroku master
 ```
 
-Now open the app in your browser:
-```bash
-heroku open
-```
